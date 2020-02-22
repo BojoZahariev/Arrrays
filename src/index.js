@@ -7,8 +7,8 @@ const Header = props => {
     <div className="header">
       <img className="sign" alt="sign" src="images/sign2.png" />
       <p className="signText">ARRRays</p>
-      <img className="banner" src="images/banner.png" />
-      <img className="banner2" src="images/banner.png" />
+      <img className="banner" alt="banner" src="images/banner.png" />
+      <img className="banner2" alt="banner" src="images/banner.png" />
 
       <p className="leftText">
         Array methods and iterators
@@ -20,8 +20,8 @@ const Header = props => {
         <br /> Stays on the ship
       </p>
 
-      <img className="skull1" src="images/skull2.png" />
-      <img className="skull2" src="images/skull2.png" />
+      <img className="skull1" alt="skull" src="images/skull2.png" />
+      <img className="skull2" alt="skull" src="images/skull2.png" />
     </div>
   );
 };
@@ -29,11 +29,19 @@ const Header = props => {
 const Pirate = props => {
   return (
     <div className={props.className}>
-      {props.parrot ? <img className="parrot" src="images/parrot2.png" /> : null}
-      {props.treasure ? <img className="treasure" src="images/treasure.png" /> : null}
+      {props.parrot ? <img className="parrot" alt="parrot" src="images/parrot2.png" /> : null}
+      {props.treasure ? <img className="treasure" alt="treasure" src="images/treasure.png" /> : null}
       <img className="pirateImg" alt="pirate" src={props.src} />
     </div>
   );
+};
+
+const Waves = () => {
+  return <img className="waves" alt="waves" src="images/waves.png" />;
+};
+
+const ShipImage = () => {
+  return <img className="shipImg" alt="ship" src="images/ship.png" />;
 };
 
 const Ship = props => {
@@ -41,26 +49,26 @@ const Ship = props => {
     return (
       <div className={props.className}>
         <div className={props.tilt ? 'tilt' : 'test'}>
-          <img className="shipImg" src="images/ship.png" />
+          <ShipImage />
           <Pirate src={'images/pirate1.png'} className={'pirate1'} />
           <Pirate src={'images/pirate2.png'} className={'pirate2'} />
         </div>
 
-        <img className="waves" src="images/waves.png" />
+        <Waves />
       </div>
     );
   } else if (props.find) {
     return (
       <div className={props.className}>
         <div className={props.tilt ? 'tilt' : 'test'}>
-          <img className="shipImg" src="images/ship.png" />
+          <ShipImage />
           <Pirate src={'images/pirate1.png'} className={'pirate1'} />
           <Pirate src={'images/pirate2.png'} className={'pirate2'} />
           <Pirate src={'images/pirate3.png'} className={'pirate3'} />
         </div>
 
         <Pirate src={'images/pirate3.png'} className={'find'} />
-        <img className="waves" src="images/waves.png" />
+        <Waves />
       </div>
     );
   } else if (props.reduce) {
@@ -70,23 +78,23 @@ const Ship = props => {
           <Pirate src={'images/pirate1.png'} className={'pirate1reduced'} />
           <Pirate src={'images/pirate2.png'} className={'pirate2reduced'} />
           <Pirate src={'images/pirate3.png'} className={'pirate3reduced'} />
-          <img className="barrelSea" src="images/barrel2.png" />
+          <img className="barrelSea" alt="barrel" src="images/barrel2.png" />
         </div>
 
-        <img className="waves" src="images/waves.png" />
+        <Waves />
       </div>
     );
   } else if (props.every || props.some) {
     return (
       <div className={props.className}>
         <div className={props.tilt ? 'tilt' : 'test'}>
-          <img className="shipImg" src="images/ship.png" />
+          <ShipImage />
           <Pirate src={'images/pirate1.png'} className={'pirate1'} />
           <Pirate src={'images/pirate2.png'} className={'pirate2'} />
           <Pirate src={'images/pirate3.png'} className={'pirate3'} />
         </div>
 
-        <img className="waves" src="images/waves.png" />
+        <Waves />
 
         <svg className="checkIcon">
           <path id="check" d="M10,50 l25,40 l95,-70" />
@@ -97,13 +105,13 @@ const Ship = props => {
     return (
       <div className={props.className}>
         <div className={props.tilt ? 'tilt' : 'test'}>
-          <img className="shipImg" src="images/ship.png" />
+          <ShipImage />
           <Pirate src={'images/pirate1.png'} className={'pirate1'} />
           <Pirate src={'images/pirate2.png'} className={'pirate2'} />
           <Pirate src={'images/pirate3.png'} className={'pirate3'} />
         </div>
 
-        <img className="waves" src="images/waves.png" />
+        <Waves />
 
         <div className="findIndex">1</div>
       </div>
@@ -112,48 +120,48 @@ const Ship = props => {
     return (
       <div className={props.className}>
         <div className={props.tilt ? 'tilt' : 'test'}>
-          <img className="shipImg" src="images/ship.png" />
+          <ShipImage />
           <Pirate src={'images/pirate1.png'} className={'pirate1'} />
           <Pirate src={'images/pirate2.png'} className={'pirate2'} />
           <Pirate src={'images/pirate3.png'} className={'pirate3pushed'} />
           <Pirate src={'images/pirate1.png'} className={'pirate4pushed'} />
         </div>
 
-        <img className="waves" src="images/waves.png" />
+        <Waves />
       </div>
     );
   } else if (props.shifted) {
     return (
       <div className={props.className}>
         <div className={props.tilt ? 'tilt' : 'test'}>
-          <img className="shipImg" src="images/ship.png" />
+          <ShipImage />
 
           <Pirate src={'images/pirate2.png'} className={'pirate2shifted'} />
           <Pirate src={'images/pirate3.png'} className={'pirate3shifted'} />
         </div>
 
-        <img className="waves" src="images/waves.png" />
+        <Waves />
       </div>
     );
   } else if (props.unshifted) {
     return (
       <div className={props.className}>
         <div className={props.tilt ? 'tilt' : 'test'}>
-          <img className="shipImg" src="images/ship.png" />
+          <ShipImage />
           <Pirate src={'images/pirate3.png'} className={'pirate3unshifted'} />
           <Pirate src={'images/pirate1.png'} className={'pirate1unshift'} />
           <Pirate src={'images/pirate2.png'} className={'pirate2unshift'} />
           <Pirate src={'images/pirate3.png'} className={'pirate3unshift'} />
         </div>
 
-        <img className="waves" src="images/waves.png" />
+        <Waves />
       </div>
     );
   } else if (props.spliced) {
     return (
       <div className={props.className}>
         <div className={props.tilt ? 'tilt' : 'test'}>
-          <img className="shipImg" src="images/ship.png" />
+          <ShipImage />
 
           <Pirate src={'images/pirate1.png'} className={'pirate1 pirate1spliced'} />
           <Pirate src={'images/pirate3.png'} className={'pirate3spliced'} />
@@ -161,45 +169,45 @@ const Ship = props => {
           <Pirate src={'images/pirate3.png'} className={'pirate3unshift'} />
         </div>
 
-        <img className="waves" src="images/waves.png" />
+        <Waves />
       </div>
     );
   } else if (props.concated1) {
     return (
       <div className={props.className}>
         <div className={props.tilt ? 'tilt' : 'test'}>
-          <img className="shipImg" src="images/ship.png" />
+          <ShipImage />
 
           <Pirate src={'images/pirate1.png'} className={'pirate1'} />
         </div>
 
-        <img className="waves" src="images/waves.png" />
+        <Waves />
       </div>
     );
   } else if (props.concated2) {
     return (
       <div className={props.className}>
         <div className={props.tilt ? 'tilt' : 'test'}>
-          <img className="shipImg" src="images/ship.png" />
+          <ShipImage />
 
           <Pirate src={'images/pirate2.png'} className={'pirate2'} />
           <Pirate src={'images/pirate3.png'} className={'pirate3'} />
         </div>
 
-        <img className="waves" src="images/waves.png" />
+        <Waves />
       </div>
     );
   } else {
     return (
       <div className={props.className}>
         <div className={props.tilt ? 'tilt' : 'test'}>
-          <img className="shipImg" src="images/ship.png" />
+          <ShipImage />
           <Pirate treasure={props.treasure} parrot={props.parrot} src={'images/pirate1.png'} className={'pirate1'} />
           <Pirate treasure={props.treasure} parrot={props.parrot} src={'images/pirate2.png'} className={'pirate2'} />
           <Pirate treasure={props.treasure} parrot={props.parrot} src={'images/pirate3.png'} className={'pirate3'} />
         </div>
 
-        <img className="waves" src="images/waves.png" />
+        <Waves />
       </div>
     );
   }
@@ -209,7 +217,7 @@ const Btn = props => {
   return (
     <div className={`btn btn${props.side}`} onClick={props.onClick}>
       <p className={`btnText btnText${props.side}`}>{props.text}</p>
-      <img className={`wheel wheel${props.side}`} src="images/wheel3.png" />
+      <img className={`wheel wheel${props.side}`} alt="wheel" src="images/wheel3.png" />
     </div>
   );
 };
@@ -905,8 +913,8 @@ class Container extends React.Component {
             <Btn side={'Right'} text="slice()" onClick={() => this.setState({ mtd: 'slice', clicked: false })} />
           </div>
 
-          <img className="barrelLeft" src="images/barrel.png" />
-          <img className="barrelRight" src="images/barrel.png" />
+          <img className="barrelLeft" alt="barrel" src="images/barrel.png" />
+          <img className="barrelRight" alt="barrel" src="images/barrel.png" />
         </div>
       </div>
     );
