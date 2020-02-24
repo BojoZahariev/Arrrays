@@ -5,10 +5,10 @@ import './index.css';
 const Header = props => {
   return (
     <div className="header">
-      <img className="sign" alt="sign" src="images/sign2.png" />
+      <img className="sign" alt="sign" src={require('./images/sign2.png')} />
       <p className="signText">ARRRays</p>
-      <img className="banner" alt="banner" src="images/banner.png" />
-      <img className="banner2" alt="banner" src="images/banner.png" />
+      <img className="banner" alt="banner" src={require('./images/banner.png')} />
+      <img className="banner2" alt="banner" src={require('./images/banner.png')} />
 
       <p className="leftText">
         Array methods and iterators
@@ -20,8 +20,8 @@ const Header = props => {
         <br /> Stays on the ship
       </p>
 
-      <img className="skull1" alt="skull" src="images/skull2.png" />
-      <img className="skull2" alt="skull" src="images/skull2.png" />
+      <img className="skull1" alt="skull" src={require('./images/skull2.png')} />
+      <img className="skull2" alt="skull" src={require('./images/skull2.png')} />
     </div>
   );
 };
@@ -29,19 +29,19 @@ const Header = props => {
 const Pirate = props => {
   return (
     <div className={props.className}>
-      {props.parrot ? <img className="parrot" alt="parrot" src="images/parrot2.png" /> : null}
-      {props.treasure ? <img className="treasure" alt="treasure" src="images/treasure.png" /> : null}
+      {props.parrot ? <img className="parrot" alt="parrot" src={require('./images/parrot2.png')} /> : null}
+      {props.treasure ? <img className="treasure" alt="treasure" src={require('./images/treasure.png')} /> : null}
       <img className="pirateImg" alt="pirate" src={props.src} />
     </div>
   );
 };
 
 const Waves = () => {
-  return <img className="waves" alt="waves" src="images/waves.png" />;
+  return <img className="waves" alt="waves" src={require('./images/waves.png')} />;
 };
 
 const ShipImage = () => {
-  return <img className="shipImg" alt="ship" src="images/ship.png" />;
+  return <img className="shipImg" alt="ship" src={require('./images/ship.png')} />;
 };
 
 const Ship = props => {
@@ -50,8 +50,8 @@ const Ship = props => {
       <div className={props.className}>
         <div className={props.tilt ? 'tilt' : 'test'}>
           <ShipImage />
-          <Pirate src={'images/pirate1.png'} className={'pirate1'} />
-          <Pirate src={'images/pirate2.png'} className={'pirate2'} />
+          <Pirate src={require('./images/pirate1.png')} className={'pirate1'} />
+          <Pirate src={require('./images/pirate2.png')} className={'pirate2'} />
         </div>
 
         <Waves />
@@ -62,12 +62,12 @@ const Ship = props => {
       <div className={props.className}>
         <div className={props.tilt ? 'tilt' : 'test'}>
           <ShipImage />
-          <Pirate src={'images/pirate1.png'} className={'pirate1'} />
-          <Pirate src={'images/pirate2.png'} className={'pirate2'} />
-          <Pirate src={'images/pirate3.png'} className={'pirate3'} />
+          <Pirate src={require('./images/pirate1.png')} className={'pirate1'} />
+          <Pirate src={require('./images/pirate2.png')} className={'pirate2'} />
+          <Pirate src={require('./images/pirate3.png')} className={'pirate3'} />
         </div>
 
-        <Pirate src={'images/pirate3.png'} className={'find'} />
+        <Pirate src={require('./images/pirate3.png')} className={'find'} />
         <Waves />
       </div>
     );
@@ -75,10 +75,10 @@ const Ship = props => {
     return (
       <div className={props.className}>
         <div className={props.tilt ? 'tilt' : 'test'}>
-          <Pirate src={'images/pirate1.png'} className={'pirate1reduced'} />
-          <Pirate src={'images/pirate2.png'} className={'pirate2reduced'} />
-          <Pirate src={'images/pirate3.png'} className={'pirate3reduced'} />
-          <img className="barrelSea" alt="barrel" src="images/barrel2.png" />
+          <Pirate src={require('./images/pirate1.png')} className={'pirate1reduced'} />
+          <Pirate src={require('./images/pirate2.png')} className={'pirate2reduced'} />
+          <Pirate src={require('./images/pirate3.png')} className={'pirate3reduced'} />
+          <img className="barrelSea" alt="barrel" src={require('./images/barrel2.png')} />
         </div>
 
         <Waves />
@@ -89,9 +89,9 @@ const Ship = props => {
       <div className={props.className}>
         <div className={props.tilt ? 'tilt' : 'test'}>
           <ShipImage />
-          <Pirate src={'images/pirate1.png'} className={'pirate1'} />
-          <Pirate src={'images/pirate2.png'} className={'pirate2'} />
-          <Pirate src={'images/pirate3.png'} className={'pirate3'} />
+          <Pirate src={require('./images/pirate1.png')} className={'pirate1'} />
+          <Pirate src={require('./images/pirate2.png')} className={'pirate2'} />
+          <Pirate src={require('./images/pirate3.png')} className={'pirate3'} />
         </div>
 
         <Waves />
@@ -106,9 +106,9 @@ const Ship = props => {
       <div className={props.className}>
         <div className={props.tilt ? 'tilt' : 'test'}>
           <ShipImage />
-          <Pirate src={'images/pirate1.png'} className={'pirate1'} />
-          <Pirate src={'images/pirate2.png'} className={'pirate2'} />
-          <Pirate src={'images/pirate3.png'} className={'pirate3'} />
+          <Pirate src={require('./images/pirate1.png')} className={'pirate1'} />
+          <Pirate src={require('./images/pirate2.png')} className={'pirate2'} />
+          <Pirate src={require('./images/pirate3.png')} className={'pirate3'} />
         </div>
 
         <Waves />
@@ -121,10 +121,10 @@ const Ship = props => {
       <div className={props.className}>
         <div className={props.tilt ? 'tilt' : 'test'}>
           <ShipImage />
-          <Pirate src={'images/pirate1.png'} className={'pirate1'} />
-          <Pirate src={'images/pirate2.png'} className={'pirate2'} />
-          <Pirate src={'images/pirate3.png'} className={'pirate3pushed'} />
-          <Pirate src={'images/pirate1.png'} className={'pirate4pushed'} />
+          <Pirate src={require('./images/pirate1.png')} className={'pirate1'} />
+          <Pirate src={require('./images/pirate2.png')} className={'pirate2'} />
+          <Pirate src={require('./images/pirate3.png')} className={'pirate3pushed'} />
+          <Pirate src={require('./images/pirate1.png')} className={'pirate4pushed'} />
         </div>
 
         <Waves />
@@ -136,8 +136,8 @@ const Ship = props => {
         <div className={props.tilt ? 'tilt' : 'test'}>
           <ShipImage />
 
-          <Pirate src={'images/pirate2.png'} className={'pirate2shifted'} />
-          <Pirate src={'images/pirate3.png'} className={'pirate3shifted'} />
+          <Pirate src={require('./images/pirate2.png')} className={'pirate2shifted'} />
+          <Pirate src={require('./images/pirate3.png')} className={'pirate3shifted'} />
         </div>
 
         <Waves />
@@ -148,10 +148,10 @@ const Ship = props => {
       <div className={props.className}>
         <div className={props.tilt ? 'tilt' : 'test'}>
           <ShipImage />
-          <Pirate src={'images/pirate3.png'} className={'pirate3unshifted'} />
-          <Pirate src={'images/pirate1.png'} className={'pirate1unshift'} />
-          <Pirate src={'images/pirate2.png'} className={'pirate2unshift'} />
-          <Pirate src={'images/pirate3.png'} className={'pirate3unshift'} />
+          <Pirate src={require('./images/pirate3.png')} className={'pirate3unshifted'} />
+          <Pirate src={require('./images/pirate1.png')} className={'pirate1unshift'} />
+          <Pirate src={require('./images/pirate2.png')} className={'pirate2unshift'} />
+          <Pirate src={require('./images/pirate3.png')} className={'pirate3unshift'} />
         </div>
 
         <Waves />
@@ -163,10 +163,10 @@ const Ship = props => {
         <div className={props.tilt ? 'tilt' : 'test'}>
           <ShipImage />
 
-          <Pirate src={'images/pirate1.png'} className={'pirate1 pirate1spliced'} />
-          <Pirate src={'images/pirate3.png'} className={'pirate3spliced'} />
-          <Pirate src={'images/pirate2.png'} className={'pirate2unshift'} />
-          <Pirate src={'images/pirate3.png'} className={'pirate3unshift'} />
+          <Pirate src={require('./images/pirate1.png')} className={'pirate1 pirate1spliced'} />
+          <Pirate src={require('./images/pirate3.png')} className={'pirate3spliced'} />
+          <Pirate src={require('./images/pirate2.png')} className={'pirate2unshift'} />
+          <Pirate src={require('./images/pirate3.png')} className={'pirate3unshift'} />
         </div>
 
         <Waves />
@@ -178,7 +178,7 @@ const Ship = props => {
         <div className={props.tilt ? 'tilt' : 'test'}>
           <ShipImage />
 
-          <Pirate src={'images/pirate1.png'} className={'pirate1'} />
+          <Pirate src={require('./images/pirate1.png')} className={'pirate1'} />
         </div>
 
         <Waves />
@@ -190,8 +190,8 @@ const Ship = props => {
         <div className={props.tilt ? 'tilt' : 'test'}>
           <ShipImage />
 
-          <Pirate src={'images/pirate2.png'} className={'pirate2'} />
-          <Pirate src={'images/pirate3.png'} className={'pirate3'} />
+          <Pirate src={require('./images/pirate2.png')} className={'pirate2'} />
+          <Pirate src={require('./images/pirate3.png')} className={'pirate3'} />
         </div>
 
         <Waves />
@@ -202,9 +202,24 @@ const Ship = props => {
       <div className={props.className}>
         <div className={props.tilt ? 'tilt' : 'test'}>
           <ShipImage />
-          <Pirate treasure={props.treasure} parrot={props.parrot} src={'images/pirate1.png'} className={'pirate1'} />
-          <Pirate treasure={props.treasure} parrot={props.parrot} src={'images/pirate2.png'} className={'pirate2'} />
-          <Pirate treasure={props.treasure} parrot={props.parrot} src={'images/pirate3.png'} className={'pirate3'} />
+          <Pirate
+            treasure={props.treasure}
+            parrot={props.parrot}
+            src={require('./images/pirate1.png')}
+            className={'pirate1'}
+          />
+          <Pirate
+            treasure={props.treasure}
+            parrot={props.parrot}
+            src={require('./images/pirate2.png')}
+            className={'pirate2'}
+          />
+          <Pirate
+            treasure={props.treasure}
+            parrot={props.parrot}
+            src={require('./images/pirate3.png')}
+            className={'pirate3'}
+          />
         </div>
 
         <Waves />
@@ -217,7 +232,7 @@ const Btn = props => {
   return (
     <div className={`btn btn${props.side}`} onClick={props.onClick}>
       <p className={`btnText btnText${props.side}`}>{props.text}</p>
-      <img className={`wheel wheel${props.side}`} alt="wheel" src="images/wheel3.png" />
+      <img className={`wheel wheel${props.side}`} alt="wheel" src={require('./images/wheel3.png')} />
     </div>
   );
 };
@@ -909,8 +924,8 @@ class Container extends React.Component {
             <Btn side={'Right'} text="slice()" onClick={() => this.setState({ mtd: 'slice', clicked: false })} />
           </div>
 
-          <img className="barrelLeft" alt="barrel" src="images/barrel.png" />
-          <img className="barrelRight" alt="barrel" src="images/barrel.png" />
+          <img className="barrelLeft" alt="barrel" src={require('./images/barrel.png')} />
+          <img className="barrelRight" alt="barrel" src={require('./images/barrel.png')} />
         </div>
       </div>
     );
