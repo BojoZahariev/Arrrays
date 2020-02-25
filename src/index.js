@@ -230,10 +230,10 @@ const Ship = props => {
 
 const Btn = props => {
   return (
-    <div className={`btn btn${props.side}`} onClick={props.onClick}>
+    <button className={`btn btn${props.side}`} onClick={props.onClick}>
       <p className={`btnText btnText${props.side}`}>{props.text}</p>
       <img className={`wheel wheel${props.side}`} alt="wheel" src={require('./images/wheel3.png')} />
-    </div>
+    </button>
   );
 };
 

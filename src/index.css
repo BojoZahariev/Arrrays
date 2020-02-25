@@ -639,6 +639,7 @@ img {
   margin: 2px 0px;
   font-family: 'Gabriela', serif;
   letter-spacing: 0.5px;
+  text-align: left;
 }
 
 .btn:hover {
@@ -655,6 +656,7 @@ img {
 
 .btn:active {
   background-color: #a77126;
+  outline: none;
 }
 
 .btnText {
@@ -683,6 +685,7 @@ img {
 }
 
 .btnMiddle {
+  display: block;
   margin: 10px auto;
   -webkit-box-shadow: -1px 1px 5px 0px #222;
   -moz-box-shadow: -1px 1px 5px 0px #222;
